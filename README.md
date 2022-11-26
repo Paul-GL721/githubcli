@@ -1,7 +1,5 @@
 # githubcli
-Repository to create a githubcli docker image.
-
-This image can be used in any application that runs a docker container. 
+A github cli docker image based on Ubuntu. If you want to bring Github to the command line, you can use this image.
 
 ### Build the image from source
 To build the image from source run the docker command below. Change the tag name and do not forget to add the current context (**the dot at the end**).
@@ -11,6 +9,18 @@ docker build -t <tag_name>:<tag_version> <context>
 An example of a docker build command is shown below
 ```
 docker build -t paulgl721/githubcli:1.0 .
+```
+
+### Test the image
+Interactively login into the container (**replace the image version**)
+```
+docker container run -it paulgl721/githubcli:<image_version>
+// returns: root@<container_id> 
+```
+Run the github login authentication command, which should prompt you for your login details
+```
+gh auth login
+//follow the steps; it should prompt you to login into github.com or enterprise 
 ```
 
 ## Example with [jenkins server](https://www.jenkins.io/)
