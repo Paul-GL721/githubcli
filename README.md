@@ -2,11 +2,11 @@
 A github cli docker image based on Ubuntu. If you want to bring Github to the command line, you can use this image.
 
 ### Usage
-Pull the from dockerhub
+Pull the from dockerhub.
 ```
 docker pull paulgl721/githubcli:<image_version>
 ```
-Replace image version Eg
+Remember to replace the image version as shown in the command below.
 ```
 docker pull paulgl721/githubcli:2.0
 ```
@@ -18,7 +18,7 @@ docker build -t <tag_name>:<tag_version> <context>
 ```
 An example of a docker build command is shown below
 ```
-docker build -t paulgl721/githubcli:1.0 .
+docker build -t paulgl721/githubcli:2.0 .
 ```
 
 ### Test the image
