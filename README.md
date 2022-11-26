@@ -3,11 +3,20 @@ Repository to create a githubcli docker image.
 
 This image can be used in any application that runs a docker container. 
 
+### Build the image from source
+To build the image from source run the docker command below. Change the tag name and do not forget to add the current context (**the dot at the end**).
+```
+docker build -t <tag_name>:<tag_version> <context>
+```
+An example of a docker build command is shown below
+```
+docker build -t paulgl721/githubcli:1.0 .
+```
+
 ## Example with [jenkins server](https://www.jenkins.io/)
 In this example the paulgl721/githucli docker container is used as a build agent in the jenkins post stage.
 
 On successful run of the development stages, a pull request is made to the production branch in github.
-
 ```
 pipeline {
   agent {
