@@ -14,9 +14,9 @@ docker build -t paulgl721/githubcli:1.0 .
 ```
 
 ## Example with [jenkins server](https://www.jenkins.io/)
-In this example the paulgl721/githucli docker container is used as a build agent in the jenkins post stage.
+In this example the **paulgl721/githucli** docker image is used as a build agent in the jenkins post stage.
 
-On successful run of the development stages, a pull request is made to the production branch in github.
+On successful run of the development stages, a pull request is created to the production branch in github.
 ```
 pipeline {
   agent {
