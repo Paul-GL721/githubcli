@@ -1,6 +1,16 @@
 # githubcli
 A github cli docker image based on Ubuntu. If you want to bring Github to the command line, you can use this image.
 
+### Usage
+Pull the from dockerhub
+```
+docker pull paulgl721/githubcli:<image_version>
+```
+Replace image version Eg
+```
+docker pull paulgl721/githubcli:2.0
+```
+
 ### Build the image from source
 To build the image from source run the docker command below. Change the tag name and do not forget to add the current context (**the dot at the end**).
 ```
