@@ -1,13 +1,42 @@
 # githubcli
-Repository to create a githubcli docker image.
+A github cli docker image based on Ubuntu. If you want to bring Github to the command line, you can use this image. [View the project on github](https://github.com/Paul-GL721/githubcli).
 
-This image can be used in any application that runs a docker container. 
+### Usage
+Pull the from dockerhub.
+```
+docker pull paulgl721/githubcli:<image_version>
+```
+Remember to replace the image version as shown in the command below.
+```
+docker pull paulgl721/githubcli:2.0
+```
+
+### Build the image from source
+To build the image from source run the docker command below. Change the tag name and do not forget to add the current context (**the dot at the end**).
+```
+docker build -t <tag_name>:<tag_version> <context>
+```
+An example of a docker build command is shown below
+```
+docker build -t paulgl721/githubcli:2.0 .
+```
+
+### Test the image
+Interactively login into the container (**replace the image version**)
+```
+docker container run -it paulgl721/githubcli:<image_version>
+// returns: root@<container_id> 
+```
+Run the github login authentication command, which should prompt you for your login details
+```
+gh auth login
+//follow the steps; it should prompt you to login into github.com or enterprise 
+```
 
 ## Example with [jenkins server](https://www.jenkins.io/)
-In this example the paulgl721/githucli docker container is used as a build agent in the jenkins post stage.
+In this example the **paulgl721/githucli** docker image is used as a build agent in the jenkins post stage.
 
-On successful run of the development stages, a pull request is made to the production branch in github.
-
+On successful run of the development stages, a pull request is created to the production branch in github.
 ```
 pipeline {
   agent {
